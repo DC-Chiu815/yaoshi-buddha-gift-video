@@ -5,13 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>藥師佛好禮相送｜專屬影片申請</title>
-
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -31,14 +28,8 @@ body {
   box-shadow: 0 8px 30px #334b5520;
 }
 
-.header {
-  text-align: center;
-}
-
-.header-icon {
-  font-size: 36px;
-  margin-bottom: 8px;
-}
+.header { text-align: center; }
+.header-icon { font-size: 36px; margin-bottom: 8px; }
 
 h1 {
   color: #8a713a;
@@ -83,12 +74,9 @@ label {
   color: #425965;
 }
 
-.required {
-  color: #b44d42;
-}
+.required { color: #b44d42; }
 
-input[type="text"],
-input[type="date"] {
+input[type="text"], input[type="date"] {
   width: 100%;
   padding: 13px;
   border: 1px solid #cbd5d5;
@@ -98,9 +86,7 @@ input[type="date"] {
   font-size: 16px;
 }
 
-input:focus {
-  outline: 2px solid #b5c8c9;
-}
+input:focus { outline: 2px solid #b5c8c9; }
 
 .hint {
   margin-top: 6px;
@@ -126,9 +112,7 @@ input:focus {
   font-size: 15px;
 }
 
-.homework-item:last-child {
-  border-bottom: none;
-}
+.homework-item:last-child { border-bottom: none; }
 
 .homework-item input {
   width: 19px;
@@ -172,6 +156,7 @@ button:disabled {
   color: #7b8d91;
   font-size: 13px;
   line-height: 1.8;
+  overflow-wrap: anywhere;
 }
 
 .success {
@@ -181,9 +166,7 @@ button:disabled {
   line-height: 2;
 }
 
-.success-icon {
-  font-size: 45px;
-}
+.success-icon { font-size: 45px; }
 
 .success h2 {
   color: #8a713a;
@@ -200,17 +183,12 @@ button:disabled {
 </head>
 
 <body>
-
 <div class="container">
 
   <div class="header">
     <div class="header-icon">🙏 ☘️ 🙏</div>
-
     <h1>115年度～116年度<br>藥師佛好禮相送</h1>
-
-    <div class="subtitle">
-      影片功德主專屬影片申請
-    </div>
+    <div class="subtitle">影片功德主專屬影片申請</div>
   </div>
 
   <div class="divider"></div>
@@ -226,99 +204,57 @@ button:disabled {
 
     <h2 class="section-title">一、申請人資料</h2>
 
-    <label>
-      代申請者姓名 <span class="required">*</span>
-    </label>
-    <input
-      type="text"
-      id="applicant"
-      placeholder="本人申請請填寫自己姓名"
-    >
-    <div class="hint">
-      本人申請請填寫自己姓名。
-    </div>
+    <label>代申請者姓名 <span class="required">*</span></label>
+    <input type="text" id="applicant" placeholder="本人申請請填寫自己姓名">
+    <div class="hint">本人申請請填寫自己姓名。</div>
 
-    <label>
-      恭誦者姓名 <span class="required">*</span>
-    </label>
-    <input
-      type="text"
-      id="reciter"
-      placeholder="請輸入恭誦者姓名"
-    >
+    <label>恭誦者姓名 <span class="required">*</span></label>
+    <input type="text" id="reciter" placeholder="請輸入恭誦者姓名">
 
-    <label>
-      區域 <span class="required">*</span>
-    </label>
-    <input
-      type="text"
-      id="region"
-      placeholder="請輸入所在區域"
-    >
+    <label>區域 <span class="required">*</span></label>
+    <input type="text" id="region" placeholder="請輸入所在區域">
 
     <h2 class="section-title">二、影片功德主資料</h2>
 
-    <label>
-      影片功德主姓名 <span class="required">*</span>
-    </label>
-    <input
-      type="text"
-      id="benefactor"
-      placeholder="請輸入影片功德主姓名"
-    >
+    <label>影片功德主姓名 <span class="required">*</span></label>
+    <input type="text" id="benefactor" placeholder="請輸入影片功德主姓名">
 
-    <label>
-      發心功課 <span class="required">*</span>
-    </label>
-
-    <div class="hint">
-      以下五種功課可以複選，請勾選每日發心完成的項目。
-    </div>
+    <label>發心功課 <span class="required">*</span></label>
+    <div class="hint">以下五種功課可以複選，請勾選每日發心完成的項目。</div>
 
     <div class="homework-box">
-
       <label class="homework-item">
-        <input type="checkbox" name="homework"
-          value="南無藥師琉璃光如來聖號108句">
+        <input type="checkbox" name="homework" value="南無藥師琉璃光如來聖號108句">
         <span>南無藥師琉璃光如來聖號108句</span>
       </label>
 
       <label class="homework-item">
-        <input type="checkbox" name="homework"
-          value="南無消災延壽藥師佛聖號108句">
+        <input type="checkbox" name="homework" value="南無消災延壽藥師佛聖號108句">
         <span>南無消災延壽藥師佛聖號108句</span>
       </label>
 
       <label class="homework-item">
-        <input type="checkbox" name="homework"
-          value="藥師經一部">
+        <input type="checkbox" name="homework" value="藥師經一部">
         <span>藥師經一部</span>
       </label>
 
       <label class="homework-item">
-        <input type="checkbox" name="homework"
-          value="藥師灌頂真言7遍">
+        <input type="checkbox" name="homework" value="藥師灌頂真言7遍">
         <span>藥師灌頂真言7遍</span>
       </label>
 
       <label class="homework-item">
-        <input type="checkbox" name="homework"
-          value="藥師寶懺一部">
+        <input type="checkbox" name="homework" value="藥師寶懺一部">
         <span>藥師寶懺一部</span>
       </label>
-
     </div>
 
     <h2 class="section-title">三、發願持誦期間</h2>
 
-    <label>
-      發願開始日期 <span class="required">*</span>
-    </label>
+    <label>發願開始日期 <span class="required">*</span></label>
     <input type="date" id="startDate">
 
-    <label>
-      發願結束日期 <span class="required">*</span>
-    </label>
+    <label>發願結束日期 <span class="required">*</span></label>
     <input type="date" id="endDate">
 
     <div class="period-note">
@@ -332,9 +268,8 @@ button:disabled {
     </button>
 
     <div class="status" id="status">
-      請確認資料正確後再送出。
+      正在確認 LINE 連線……
     </div>
-
   </div>
 
   <div class="success" id="successArea">
@@ -348,80 +283,46 @@ button:disabled {
     </p>
   </div>
 
-  <div class="footer">
-    藥師佛慈悲護佑 ☘️ 功德圓滿
-  </div>
-
+  <div class="footer">藥師佛慈悲護佑 ☘️ 功德圓滿</div>
 </div>
 
 <script>
-
-// 等待建立新的 LIFF 後，填入正式 LIFF ID
 const LIFF_ID = "2012784412-Ehxm8Yqh";
 
 let liffReady = false;
 
 async function initLiff() {
-
   const status = document.getElementById("status");
 
   try {
+    await liff.init({ liffId: LIFF_ID });
 
-    if (LIFF_ID === "YOUR_LIFF_ID") {
-      status.textContent = "網頁已建立，等待設定 LINE LIFF。";
-      return;
-    }
-
-    await liff.init({
-      liffId: LIFF_ID
-    });
-
-    if (!liff.isLoggedIn()) {
-      liff.login();
-      return;
-    }
-
-    const context = liff.getContext();
-
-    if (
-      !liff.isInClient() ||
-      !context ||
-      !["utou", "group", "room"].includes(context.type)
-    ) {
+    // 只確認是否在 LINE App 內，不再限制聊天室類型
+    if (!liff.isInClient()) {
       status.textContent =
-        "請從 LINE 聊天室或官方帳號圖文選單開啟本申請頁面。";
+        "請使用 LINE App 開啟本申請頁面。";
       return;
     }
 
     liffReady = true;
-
     status.textContent =
       "LINE 身分連線成功，可以填寫申請。";
 
   } catch (error) {
-
-    console.error(error);
-
+    console.error("LIFF 初始化錯誤：", error);
     status.textContent =
-      "LINE 連線失敗，請重新開啟頁面。";
-
+      "LINE 連線失敗：" + (error.message || "請重新開啟頁面");
   }
 }
 
-
-// 計算是否至少滿一個日曆月
 function isAtLeastOneMonth(start, end) {
-
   const startDate = new Date(start + "T12:00:00");
   const endDate = new Date(end + "T12:00:00");
-
   const minimumDate = new Date(startDate);
-
   const originalDay = minimumDate.getDate();
 
   minimumDate.setMonth(minimumDate.getMonth() + 1);
 
-  // 避免月底加一個月時日期自動溢位
   if (minimumDate.getDate() < originalDay) {
     minimumDate.setDate(0);
   }
@@ -429,91 +330,45 @@ function isAtLeastOneMonth(start, end) {
   return endDate >= minimumDate;
 }
 
-
 async function submitForm() {
-
-  const applicant =
-    document.getElementById("applicant").value.trim();
-
-  const reciter =
-    document.getElementById("reciter").value.trim();
-
-  const region =
-    document.getElementById("region").value.trim();
-
-  const benefactor =
-    document.getElementById("benefactor").value.trim();
-
-  const startDate =
-    document.getElementById("startDate").value;
-
-  const endDate =
-    document.getElementById("endDate").value;
-
-  const status =
-    document.getElementById("status");
-
-  const btn =
-    document.getElementById("sendBtn");
+  const applicant = document.getElementById("applicant").value.trim();
+  const reciter = document.getElementById("reciter").value.trim();
+  const region = document.getElementById("region").value.trim();
+  const benefactor = document.getElementById("benefactor").value.trim();
+  const startDate = document.getElementById("startDate").value;
+  const endDate = document.getElementById("endDate").value;
+  const status = document.getElementById("status");
+  const btn = document.getElementById("sendBtn");
 
   const homework = Array.from(
-    document.querySelectorAll(
-      'input[name="homework"]:checked'
-    )
+    document.querySelectorAll('input[name="homework"]:checked')
   ).map(item => item.value);
 
-
-  // 必填欄位檢查
-  if (
-    !applicant ||
-    !reciter ||
-    !region ||
-    !benefactor ||
-    !startDate ||
-    !endDate
-  ) {
-
+  if (!applicant || !reciter || !region ||
+      !benefactor || !startDate || !endDate) {
     alert("請完整填寫所有必填資料。");
     return;
-
   }
 
-
-  // 功課複選檢查
   if (homework.length === 0) {
-
     alert("請至少勾選一項發心功課。");
     return;
-
   }
 
-
-  // 日期檢查
   if (endDate < startDate) {
-
     alert("發願結束日期不可早於開始日期。");
     return;
-
   }
 
-
-  // 至少一個月檢查
   if (!isAtLeastOneMonth(startDate, endDate)) {
-
     alert("發願持誦期間必須至少滿一個月，請重新確認日期。");
     return;
-
   }
 
-
-  // LINE 連線檢查
-  if (!liffReady) {
-
-    alert("目前尚未完成 LINE 連線，請從 LINE 官方帳號圖文選單進入。");
+  if (!liffReady || !liff.isInClient()) {
+    alert("LINE 尚未完成連線，請從 LINE 官方帳號聊天室重新開啟。");
     return;
-
   }
-
 
   const message =
 `☘️【115年度～116年度藥師佛好禮相送】專屬影片申請
@@ -540,42 +395,31 @@ ${startDate} 至 ${endDate}
 
 懺悔弟子 ${applicant} 虔誠頂禮`;
 
-
   try {
-
     btn.disabled = true;
-
     status.textContent = "正在送出申請，請稍候……";
 
     await liff.sendMessages([
-      {
-        type: "text",
-        text: message
-      }
+      { type: "text", text: message }
     ]);
 
     document.getElementById("formArea").style.display = "none";
-
     document.getElementById("successArea").style.display = "block";
 
   } catch (error) {
-
-    console.error(error);
+    console.error("送出訊息錯誤：", error);
 
     status.textContent =
-      "送出失敗，請確認 LINE 連線後再試一次。";
+      "送出失敗：" + (error.message || "請重新開啟 LINE 再試一次");
+
+    alert("送出失敗，錯誤原因：" +
+      (error.message || "請重新開啟 LINE 再試一次"));
 
     btn.disabled = false;
-
   }
-
 }
 
-
-// 啟動 LIFF
 initLiff();
-
 </script>
-
 </body>
 </html>
