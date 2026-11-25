@@ -5,27 +5,577 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>藥師佛好禮相送｜專屬影片申請</title>
+
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;padding:20px 14px;
- background:linear-gradient(145deg,#e9f0f1,#d9e5e8,#f4eddf);
- color:#344b54;
- font-family:"Noto Serif TC","Microsoft JhengHei",serif;
+* {
+  box-sizing: border-box;
 }
-.container{
- max-width:580px;margin:auto;padding:25px 20px;
- background:#fffefa;border:1px solid #c6b58e;
- border-radius:18px;box-shadow:0 8px 28px #304b5220;
+
+body {
+  margin: 0;
+  padding: 20px 13px;
+  background: linear-gradient(145deg,#e8f0f2,#d9e5e9,#f5eee0);
+  color: #354b56;
+  font-family: "Noto Serif TC","Microsoft JhengHei",serif;
 }
-header{text-align:center}
-.symbol{font-size:32px}
-h1{font-size:23px;line-height:1.6;color:#876d39;letter-spacing:1px;margin:8px 0}
-.subtitle{font-size:14px;color:#748d91}
-.divider{height:1px;background:#d9cba9;margin:22px 0}
-.notice{
- background:#edf3f1;padding:15px;border-radius:10px;
- font-size:14px;line-height:1.9;
+
+.container {
+  max-width: 580px;
+  margin: auto;
+  padding: 25px 20px;
+  background: #fffefa;
+  border: 1px solid #c5b27d;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px #334b5520;
 }
-h2{font-size:17px;color:#876d39
+
+.header {
+  text-align: center;
+}
+
+.header-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  color: #8a713a;
+  font-size: 23px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  margin: 8px 0;
+}
+
+.subtitle {
+  color: #71848c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(to right,transparent,#c6b17b,transparent);
+  margin: 22px 0;
+}
+
+.intro {
+  padding: 16px;
+  background: #edf3f4;
+  border-radius: 11px;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.section-title {
+  margin: 25px 0 12px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #dfd5bc;
+  color: #8a713a;
+  font-size: 18px;
+}
+
+label {
+  display: block;
+  margin: 17px 0 7px;
+  font-size: 15px;
+  color: #425965;
+}
+
+.required {
+  color: #b44d42;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #cbd5d5;
+  border-radius: 8px;
+  background: #fff;
+  color: #354b56;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #b5c8c9;
+}
+
+.hint {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #849398;
+  line-height: 1.7;
+}
+
+.homework-box {
+  padding: 14px;
+  background: #f2f5f2;
+  border: 1px solid #d8e0d7;
+  border-radius: 11px;
+}
+
+.homework-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 5px;
+  border-bottom: 1px solid #dce4dc;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.homework-item:last-child {
+  border-bottom: none;
+}
+
+.homework-item input {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  accent-color: #8a713a;
+}
+
+.period-note {
+  padding: 12px;
+  background: #f8f2e5;
+  border-radius: 9px;
+  color: #806c43;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 14px;
+}
+
+button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(120deg,#526f7b,#8a713a);
+  color: white;
+  font-size: 17px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 14px;
+  text-align: center;
+  color: #7b8d91;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.success {
+  display: none;
+  padding: 30px 8px;
+  text-align: center;
+  line-height: 2;
+}
+
+.success-icon {
+  font-size: 45px;
+}
+
+.success h2 {
+  color: #8a713a;
+  font-size: 23px;
+}
+
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  color: #87979a;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="header-icon">🙏 ☘️ 🙏</div>
+
+    <h1>115年度～116年度<br>藥師佛好禮相送</h1>
+
+    <div class="subtitle">
+      影片功德主專屬影片申請
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div id="formArea">
+
+    <div class="intro">
+      當家師父吉祥：<br>
+      弟子要向當家師父申請「115年度～116年度藥師佛好禮相送」專屬影片。<br><br>
+      每位影片功德主每日完成以下基本功課五擇一，持續至少一個月，也可以自行發願更長期間，或持續至116年度藥師佛聖誕大法會前夕。<br><br>
+      ☘️ 若有多位同時申請，請逐筆分開申請。
+    </div>
+
+    <h2 class="section-title">一、申請人資料</h2>
+
+    <label>
+      代申請者姓名 <span class="required">*</span>
+    </label>
+    <input
+      type="text"
+      id="applicant"
+      placeholder="本人申請請填寫自己姓名"
+    >
+    <div class="hint">
+      本人申請請填寫自己姓名。
+    </div>
+
+    <label>
+      恭誦者姓名 <span class="required">*</span>
+    </label>
+    <input
+      type="text"
+      id="reciter"
+      placeholder="請輸入恭誦者姓名"
+    >
+
+    <label>
+      區域 <span class="required">*</span>
+    </label>
+    <input
+      type="text"
+      id="region"
+      placeholder="請輸入所在區域"
+    >
+
+    <h2 class="section-title">二、影片功德主資料</h2>
+
+    <label>
+      影片功德主姓名 <span class="required">*</span>
+    </label>
+    <input
+      type="text"
+      id="benefactor"
+      placeholder="請輸入影片功德主姓名"
+    >
+
+    <label>
+      發心功課 <span class="required">*</span>
+    </label>
+
+    <div class="hint">
+      以下五種功課可以複選，請勾選每日發心完成的項目。
+    </div>
+
+    <div class="homework-box">
+
+      <label class="homework-item">
+        <input type="checkbox" name="homework"
+          value="南無藥師琉璃光如來聖號108句">
+        <span>南無藥師琉璃光如來聖號108句</span>
+      </label>
+
+      <label class="homework-item">
+        <input type="checkbox" name="homework"
+          value="南無消災延壽藥師佛聖號108句">
+        <span>南無消災延壽藥師佛聖號108句</span>
+      </label>
+
+      <label class="homework-item">
+        <input type="checkbox" name="homework"
+          value="藥師經一部">
+        <span>藥師經一部</span>
+      </label>
+
+      <label class="homework-item">
+        <input type="checkbox" name="homework"
+          value="藥師灌頂真言7遍">
+        <span>藥師灌頂真言7遍</span>
+      </label>
+
+      <label class="homework-item">
+        <input type="checkbox" name="homework"
+          value="藥師寶懺一部">
+        <span>藥師寶懺一部</span>
+      </label>
+
+    </div>
+
+    <h2 class="section-title">三、發願持誦期間</h2>
+
+    <label>
+      發願開始日期 <span class="required">*</span>
+    </label>
+    <input type="date" id="startDate">
+
+    <label>
+      發願結束日期 <span class="required">*</span>
+    </label>
+    <input type="date" id="endDate">
+
+    <div class="period-note">
+      ☘️ 發願持誦期間至少一個月。<br>
+      可自訂兩個月、三個月、半年或更長期間。<br>
+      也可以發願持誦至116年度藥師佛聖誕大法會前夕。
+    </div>
+
+    <button id="sendBtn" onclick="submitForm()">
+      送出專屬影片申請
+    </button>
+
+    <div class="status" id="status">
+      請確認資料正確後再送出。
+    </div>
+
+  </div>
+
+  <div class="success" id="successArea">
+    <div class="success-icon">🙏</div>
+    <h2>申請資料已送出</h2>
+    <p>
+      感恩您的發心與精進。<br>
+      祈願藥師佛慈悲護佑，<br>
+      福慧增長，所求滿願。<br><br>
+      南無藥師琉璃光如來！
+    </p>
+  </div>
+
+  <div class="footer">
+    藥師佛慈悲護佑 ☘️ 功德圓滿
+  </div>
+
+</div>
+
+<script>
+
+// 等待建立新的 LIFF 後，填入正式 LIFF ID
+const LIFF_ID = "YOUR_LIFF_ID";
+
+let liffReady = false;
+
+async function initLiff() {
+
+  const status = document.getElementById("status");
+
+  try {
+
+    if (LIFF_ID === "YOUR_LIFF_ID") {
+      status.textContent = "網頁已建立，等待設定 LINE LIFF。";
+      return;
+    }
+
+    await liff.init({
+      liffId: LIFF_ID
+    });
+
+    if (!liff.isLoggedIn()) {
+      liff.login();
+      return;
+    }
+
+    const context = liff.getContext();
+
+    if (
+      !liff.isInClient() ||
+      !context ||
+      !["utou", "group", "room"].includes(context.type)
+    ) {
+      status.textContent =
+        "請從 LINE 聊天室或官方帳號圖文選單開啟本申請頁面。";
+      return;
+    }
+
+    liffReady = true;
+
+    status.textContent =
+      "LINE 身分連線成功，可以填寫申請。";
+
+  } catch (error) {
+
+    console.error(error);
+
+    status.textContent =
+      "LINE 連線失敗，請重新開啟頁面。";
+
+  }
+}
+
+
+// 計算是否至少滿一個日曆月
+function isAtLeastOneMonth(start, end) {
+
+  const startDate = new Date(start + "T12:00:00");
+  const endDate = new Date(end + "T12:00:00");
+
+  const minimumDate = new Date(startDate);
+
+  const originalDay = minimumDate.getDate();
+
+  minimumDate.setMonth(minimumDate.getMonth() + 1);
+
+  // 避免月底加一個月時日期自動溢位
+  if (minimumDate.getDate() < originalDay) {
+    minimumDate.setDate(0);
+  }
+
+  return endDate >= minimumDate;
+}
+
+
+async function submitForm() {
+
+  const applicant =
+    document.getElementById("applicant").value.trim();
+
+  const reciter =
+    document.getElementById("reciter").value.trim();
+
+  const region =
+    document.getElementById("region").value.trim();
+
+  const benefactor =
+    document.getElementById("benefactor").value.trim();
+
+  const startDate =
+    document.getElementById("startDate").value;
+
+  const endDate =
+    document.getElementById("endDate").value;
+
+  const status =
+    document.getElementById("status");
+
+  const btn =
+    document.getElementById("sendBtn");
+
+  const homework = Array.from(
+    document.querySelectorAll(
+      'input[name="homework"]:checked'
+    )
+  ).map(item => item.value);
+
+
+  // 必填欄位檢查
+  if (
+    !applicant ||
+    !reciter ||
+    !region ||
+    !benefactor ||
+    !startDate ||
+    !endDate
+  ) {
+
+    alert("請完整填寫所有必填資料。");
+    return;
+
+  }
+
+
+  // 功課複選檢查
+  if (homework.length === 0) {
+
+    alert("請至少勾選一項發心功課。");
+    return;
+
+  }
+
+
+  // 日期檢查
+  if (endDate < startDate) {
+
+    alert("發願結束日期不可早於開始日期。");
+    return;
+
+  }
+
+
+  // 至少一個月檢查
+  if (!isAtLeastOneMonth(startDate, endDate)) {
+
+    alert("發願持誦期間必須至少滿一個月，請重新確認日期。");
+    return;
+
+  }
+
+
+  // LINE 連線檢查
+  if (!liffReady) {
+
+    alert("目前尚未完成 LINE 連線，請從 LINE 官方帳號圖文選單進入。");
+    return;
+
+  }
+
+
+  const message =
+`☘️【115年度～116年度藥師佛好禮相送】專屬影片申請
+
+當家師父吉祥：
+
+弟子要向當家師父申請「115年度～116年度藥師佛好禮相送」專屬影片。
+
+🔹代申請者姓名：${applicant}
+🔹恭誦者姓名：${reciter}
+🔹區域：${region}
+
+🌸影片功德主
+🔹姓名：${benefactor}
+
+🔹發心功課：
+${homework.map((item, index) => `${index + 1}. ${item}`).join("\n")}
+
+🔹發願持誦期間：
+${startDate} 至 ${endDate}
+
+請當家師父賜給弟子藥師佛專屬影片。
+感恩當家師父！
+
+懺悔弟子 ${applicant} 虔誠頂禮`;
+
+
+  try {
+
+    btn.disabled = true;
+
+    status.textContent = "正在送出申請，請稍候……";
+
+    await liff.sendMessages([
+      {
+        type: "text",
+        text: message
+      }
+    ]);
+
+    document.getElementById("formArea").style.display = "none";
+
+    document.getElementById("successArea").style.display = "block";
+
+  } catch (error) {
+
+    console.error(error);
+
+    status.textContent =
+      "送出失敗，請確認 LINE 連線後再試一次。";
+
+    btn.disabled = false;
+
+  }
+
+}
+
+
+// 啟動 LIFF
+initLiff();
+
+</script>
+
+</body>
+</html>
